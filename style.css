@@ -1,0 +1,221 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Gold */
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 20px;
+    background-color: #5cb85c; /* Lighter Green */
+    color: white;
+    margin-top: 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #ff8c00; /* Dark Orange */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e07b00;
+}
+
+.btn-secondary {
+    background-color: #007bff; /* Blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3;
+}
+
+/* Section Styling */
+.section-padded {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-padded h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #4CAF50;
+}
+
+.bg-light {
+    background-color: #e9ecef;
+}
+
+/* Menu Section Specifics */
+.menu-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.menu-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item h3 {
+    color: #ff8c00;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.menu-item span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4CAF50;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.add-to-cart-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #45a049;
+}
+
+/* Contact Section Specifics */
+address {
+    font-style: normal;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .menu-item {
+        width: 100%;
+        max-width: 350px; /* Limit width on smaller screens */
+    }
+}

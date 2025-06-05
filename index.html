@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Flavor Hub - Delicious Dining</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for 'Inter' - Tailwind uses a sans-serif default, but specifying ensures consistency */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- Header Section -->
+    <header class="bg-green-600 text-white py-4 shadow-md rounded-b-lg">
+        <nav class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+            <div class="text-3xl font-bold mb-2 md:mb-0">The Flavor Hub</div>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="hover:text-yellow-300 transition-colors duration-300 font-medium">Home</a></li>
+                <li><a href="#menu" class="hover:text-yellow-300 transition-colors duration-300 font-medium">Menu</a></li>
+                <li><a href="#about" class="hover:text-yellow-300 transition-colors duration-300 font-medium">About Us</a></li>
+                <li><a href="#contact" class="hover:text-yellow-300 transition-colors duration-300 font-medium">Contact</a></li>
+                <li><a href="#" id="reservationsBtn" class="hover:text-yellow-300 transition-colors duration-300 font-medium">Reservations</a></li>
+            </ul>
+        </nav>
+        <!-- Hero Section -->
+        <div class="hero bg-green-700 text-white py-20 px-4 mt-4 text-center rounded-lg mx-auto max-w-7xl">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">Experience Culinary Excellence</h1>
+            <p class="text-xl md:text-2xl mb-8">Fresh ingredients, exquisite flavors, unforgettable memories.</p>
+            <button id="orderNowBtn" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">Order Now</button>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-12 px-4">
+        <!-- Menu Section -->
+        <section id="menu" class="mb-16 text-center">
+            <h2 class="text-4xl font-bold text-green-700 mb-10">Our Delicious Menu</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+                <!-- Menu Item 1 -->
+                <div class="menu-item bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-sm">
+                    <img src="https://placehold.co/400x250/F8D8A8/5C4033?text=Classic+Burger" alt="Classic Burger" class="w-full h-40 object-cover mb-4 rounded-lg">
+                    <h3 class="text-2xl font-semibold text-orange-600 mb-2">Classic Burger</h3>
+                    <p class="text-gray-600 mb-4">Juicy patty, fresh lettuce, tomato, cheese, served with crispy fries.</p>
+                    <span class="text-xl font-bold text-green-600 block mb-4">$12.99</span>
+                    <button class="add-to-cart-btn bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300">Add to Cart</button>
+                </div>
+                <!-- Menu Item 2 -->
+                <div class="menu-item bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-sm">
+                    <img src="https://placehold.co/400x250/A8D8F8/33405C?text=Spicy+Pasta" alt="Spicy Pasta" class="w-full h-40 object-cover mb-4 rounded-lg">
+                    <h3 class="text-2xl font-semibold text-orange-600 mb-2">Spicy Pasta</h3>
+                    <p class="text-gray-600 mb-4">Al dente pasta with a fiery arrabiata sauce and fresh basil.</p>
+                    <span class="text-xl font-bold text-green-600 block mb-4">$15.50</span>
+                    <button class="add-to-cart-btn bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300">Add to Cart</button>
+                </div>
+                <!-- Menu Item 3 -->
+                <div class="menu-item bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-sm">
+                    <img src="https://placehold.co/400x250/D8A8F8/5C3340?text=Chef's+Salad" alt="Chef's Special Salad" class="w-full h-40 object-cover mb-4 rounded-lg">
+                    <h3 class="text-2xl font-semibold text-orange-600 mb-2">Chef's Special Salad</h3>
+                    <p class="text-gray-600 mb-4">Seasonal greens, grilled chicken, feta, and our signature dressing.</p>
+                    <span class="text-xl font-bold text-green-600 block mb-4">$11.75</span>
+                    <button class="add-to-cart-btn bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300">Add to Cart</button>
+                </div>
+            </div>
+            <button id="viewFullMenuBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 mt-12">View Full Menu</button>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="bg-gray-100 p-12 rounded-xl mb-16 text-center shadow-inner">
+            <h2 class="text-4xl font-bold text-green-700 mb-6">About The Flavor Hub</h2>
+            <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-8">
+                At The Flavor Hub, we believe in creating more than just meals; we create experiences. Our chefs craft every dish with passion and precision, using only the freshest local ingredients. Come and discover your new favorite place where quality and taste meet harmony.
+            </p>
+            <button id="learnMoreBtn" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">Learn More</button>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="text-center">
+            <h2 class="text-4xl font-bold text-green-700 mb-6">Contact Us</h2>
+            <p class="text-lg text-gray-700 mb-8">Have a question or want to leave feedback? We'd love to hear from you!</p>
+            <address class="not-italic text-lg text-gray-700 mb-8 leading-loose">
+                <p><strong class="text-green-600">Location:</strong> 123 Foodie Lane, Chennai, Tamil Nadu, India</p>
+                <p><strong class="text-green-600">Phone:</strong> +91 98765 43210</p>
+                <p><strong class="text-green-600">Email:</strong> info@flavorhub.com</p>
+            </address>
+            <button id="getDirectionsBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">Get Directions</button>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-6 mt-12 text-center rounded-t-lg">
+        <p>&copy; 2025 The Flavor Hub. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
